@@ -17,15 +17,20 @@ public class Exer002 {
         int j = 0;
         int k = 1;
 
-        for (int i = 0; i < novoVetor.length; i++) {
-            if (k < vetor.length) {
+        if (vetor.length % 2 == 0) {
+            for (int i = 0; i < novoVetor.length; i++) {
                 novoVetor[i] = vetor[j] + vetor[k];
+                j += 2;
+                k += 2;
             }
-            else {
-                novoVetor[i] = vetor[j] * 2;
+        }
+        else {
+            for (int i = 0; i < novoVetor.length - 1; i++) {
+                novoVetor[i] = vetor[j] + vetor[k];
+                j += 2;
+                k += 2;
             }
-            j += 2;
-            k += 2;
+            novoVetor[novoVetor.length - 1] = vetor[vetor.length - 1] * 2;
         }
 
         return novoVetor;
@@ -36,7 +41,7 @@ public class Exer002 {
 
         System.out.println("Digite a quantidade de elementos no vetor: ");
         int x = sc.nextInt();
-        int[] vetor = new int[x];
+        int[] vetor;
 
         vetor = preencherVetor(x);
 
