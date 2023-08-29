@@ -1,3 +1,16 @@
+/*
+Data: 29/08/2023
+
+3) Uma partida de basquete é disputada por duas equipes adversárias. Suas pontuações são marcadas em 4 períodos,
+chamados de “quartos” e, ao final, ganha a partida quem marcou mais ponto na soma dos períodos. Em caso de
+empate, haverá quantas prorrogações forem necessárias até que uma equipe saia vencedora. É necessário saber o
+nome da equipe vencedora de uma partida, bem como imprimir o placar no formato abaixo:
+
+        1Q 2Q 3Q 4Q PR FINAL
+EQUIPE1 21 19 23 24 -- 87
+EQUIPE2 32 25 20 20 -- 97
+ */
+
 import java.util.ArrayList;
 
 public class Partida {
