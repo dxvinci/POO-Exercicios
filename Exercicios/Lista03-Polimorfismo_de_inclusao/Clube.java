@@ -20,7 +20,7 @@ public class Clube {
      * @param id do frequentador
      * @return Frequentador
      */
-    public Frequentador getFrequentadorPorId(String id) {
+    private Frequentador getFrequentadorPorId(String id) {
         for (int i = 0; i < quantFreq; i++) {
             if(id.equals(frequentadores.get(i).getID()))
                 return frequentadores.get(i);
@@ -33,7 +33,7 @@ public class Clube {
      * @param novo frequentador
      * @return true se foi possível adicionar à lista, false se não
      */
-    public boolean addFrequentador(Frequentador novo) {
+    private boolean addFrequentador(Frequentador novo) {
         boolean resposta = true;
         frequentadores.add(novo);
         quantFreq++;
