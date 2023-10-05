@@ -18,8 +18,12 @@ public class Socio extends Frequentador {
         }
     }
 
-    public boolean isPresenteNoClube() {
-        return visitas.getLast().getHoraSaida() == null;
+    public boolean isPresenteNoClube(LocalDate data) {
+        for (Visita visita : visitas) {
+            if (visita.getData().equals(data))
+                return visita.getHoraSaida() == null;
+        }
+        return false;
     }
 
     private boolean podeGerarConviteNoMes (LocalDate data) {

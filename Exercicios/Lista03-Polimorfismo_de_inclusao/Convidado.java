@@ -34,7 +34,11 @@ public class Convidado extends Frequentador {
             System.out.println("Convite inválido: Data não correspondente");
             resposta = false;
         }
-        else if (convite.getSocio().visitouClubeEm(data) && !convite.getSocio().isPresenteNoClube()) {
+        else if (!convite.getSocio().visitouClubeEm(data)) {
+            System.out.println("Convite inválido: Sócio não está no clube hoje.");
+            resposta = false;
+        }
+        else if (convite.getSocio().visitouClubeEm(data) && !convite.getSocio().isPresenteNoClube(data)) {
             System.out.println("Convite inválido: Sócio não está presente no clube");
             resposta = false;
         }
