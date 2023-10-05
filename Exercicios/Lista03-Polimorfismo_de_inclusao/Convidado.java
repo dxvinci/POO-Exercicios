@@ -21,7 +21,7 @@ public class Convidado extends Frequentador {
     }
 
     private boolean validarConvite(LocalDate data) {
-        boolean resposta = true;
+        boolean resposta;
 
         if (convites.isEmpty()) {
             System.out.println("Convite inválido: Convidado não possui convites");
@@ -34,7 +34,7 @@ public class Convidado extends Frequentador {
             System.out.println("Convite inválido: Data não correspondente");
             resposta = false;
         }
-        else if (!convite.getSocio().visitouClubeEm(data)) {
+        else if (convite.getSocio().visitouClubeEm(data) && !convite.getSocio().isPresenteNoClube()) {
             System.out.println("Convite inválido: Sócio não está presente no clube");
             resposta = false;
         }
