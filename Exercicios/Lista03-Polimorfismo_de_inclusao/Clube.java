@@ -33,33 +33,12 @@ public class Clube {
      * @param novo frequentador
      * @return true se foi possível adicionar à lista, false se não
      */
-    private boolean addFrequentador(Frequentador novo) {
+    public boolean addFrequentador(Frequentador novo) {
         boolean resposta = true;
         frequentadores.add(novo);
+        System.out.println("Cadastro realizado com sucesso. ID: " + novo.getID());
         quantFreq++;
         return resposta;
-    }
-
-    /**
-     * Cadastra um novo sócio no clube, chamando o método addFrequentador
-     * @param socio novo
-     */
-    public void cadastrarSocio(Socio socio) {
-        if (addFrequentador(socio))
-            System.out.println("Sócio cadastrado com sucesso. ID: " + socio.getID());
-        else
-            System.out.println("Não foi possível cadastrar o sócio");
-    }
-
-    /**
-     * Cadastra um novo convidado no clube, chamando o método addFrequentador
-     * @param convidado novo
-     */
-    public void cadastrarConvidado(Convidado convidado) {
-        if (addFrequentador(convidado))
-            System.out.println("Convidado cadastrado com sucesso. ID: " + convidado.getID());
-        else
-            System.out.println("Não foi possível cadastrar o convidado");
     }
 
     /**

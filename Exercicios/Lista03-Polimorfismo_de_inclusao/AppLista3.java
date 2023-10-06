@@ -72,12 +72,12 @@ public class AppLista3 {
             case 1 -> {
                 limparTela();
                 Socio socio = cadastroSocio();
-                clube.cadastrarSocio(socio);
+                clube.addFrequentador(socio);
             }
             case 2 -> {
                 limparTela();
                 Convidado convidado = cadastroConvidado();
-                clube.cadastrarConvidado(convidado);
+                clube.addFrequentador(convidado);
             }
         }
     }
@@ -131,7 +131,7 @@ public class AppLista3 {
             case 2 -> {
                 limparTela();
                 Convidado convidado = cadastroConvidado();
-                clube.cadastrarConvidado(convidado);
+                clube.addFrequentador(convidado);
                 gerarConvite(clube);
             }
         }
